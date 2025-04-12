@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>显式转换</title>
+</head>
+<body>
+<script>
+
+  // 1. Number()方法包含
+  let str = '123'
+  console.log(Number(str))
+  console.log(Number('FWB'))
+  let num = Number(prompt('输入年薪'))  // 隐式转换  +prompt('输入年薪')
+  console.log(num)
+
+  // 2. parseInt
+  console.log(parseInt('12px'))     // 12
+  console.log(parseInt('12.34px'))  // 12
+  console.log(parseInt('12.94px'))  // 12
+  console.log(parseInt('abc12.34px'))  // NaN -- 只能取数字开头的字符串
+
+  // 3. parseFloat
+  console.log(parseFloat('12px'))     // 12
+  console.log(parseFloat('12.34px'))  //12.34
+  console.log(parseFloat('12.94px'))  //12.94
+  console.log(parseFloat('abc12.34px'))  // NaN -- 只能取数字开头的字符串
+
+</script>
+</body>
+</html>
