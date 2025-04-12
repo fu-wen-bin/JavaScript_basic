@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS基本数据类型</title>
+</head>
+<body>
+<script>
+  // js 弱数据类型的语言，只有赋值的时候才知道数据类型
+  // let num = 'FWB'
+  let num = 10.11
+  console.log(num)
+  console.log(1 + 1)
+  console.log(1 * 1)
+  console.log(1 / 1)
+  console.log(4 % 2)
+  console.log(5 % 3)
+  console.log(3 % 5)
+  // Java 强数据类型 int num = 10
+
+  // NaN  Not a Number --计算错误，粘性的，和任何数据操作都返回NaN
+  console.log(NaN - 2) //NaN
+  console.log(NaN + 2) //NaN
+  console.log(NaN / 2) //NaN
+  console.log(NaN === NaN) //false
+
+  // String 字符串类型，单引号、双引号、反引号中都属属于String
+  let str = 'FWB' // 使用单引号
+  let str1 = 'FWB' // 使用双引号
+  let str2 = `FWB` // 使用反引号
+  console.log(str2) // 输出字符串
+  console.log(11)  // 输出数字
+  console.log('11')  //看起来是数字，被引号包裹实际是字符串
+  console.log(str)  //输出字符串
+  console.log('str')  //被引号包裹，输出引号中的字符串信息
+  console.log('傅文斌学习很有"激情"') //有多种引号的时候需要对引号进行区分，也可以使用转义字符
+
+  // 字符串拼接 +号
+  console.log('傅文斌' + '同学')
+  let age = 18
+  console.log('我今年' + age + '岁了')
+  document.write('我今年' + age + '岁了')
+
+  // 布尔类型   真或假  true  false
+  let isCool = true
+  console.log(isCool)
+
+  // 未定义类型  undefined 弱数据类型  声明一个变量但未赋值就是未定义类型
+  let und
+  console.log(und)
+  document.write(und) // 输出undefined  常用于用户传来的数据是否为空
+
+  // 空类型  null
+  let obj = null
+  console.log(obj)
+  document.write(obj) // 输出null
+
+  //undefined--代表没有赋值   null--代表赋值了但内容为空   二者计算也有区别
+  console.log(`undefined + 1 = ${undefined + 1}`)
+  console.log(`null + 1 = ${null + 1}`)
+
+  //检测数据类型  typeof关键字  -- typeof x / typeof(x) 有无括号都可以
+  let number = 10
+  console.log(typeof number)
+  let str3 = 'FWB'
+  console.log(typeof str3)
+  let str4 = '10'
+  console.log(typeof str4)
+  let flag = true
+  console.log(typeof flag)
+  let un
+  console.log(typeof un)
+  let obj1 = null
+  console.log(typeof obj1)
+
+</script>
+</body>
+</html>
