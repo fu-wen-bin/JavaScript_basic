@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>乘法表</title>
+  <style>
+    span {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid pink;
+      margin: 2px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px pink;
+      width: 100px;
+      text-align: center;
+      color: crimson;
+    }
+  </style>
+</head>
+<body>
+<script>
+  // 1. 外层循环控制行数
+  for (let i = 1; i <= 9; i++) {
+    // 2. 内层循环控制列数
+    for (let j = 1; j <= i; j++) {
+      document.write(`<span>${j} X ${i} = ${i * j}</span>`) //输出计算结果
+    }
+    document.write('<br>') //完成换行
+  }
+</script>
+</body>
+</html>

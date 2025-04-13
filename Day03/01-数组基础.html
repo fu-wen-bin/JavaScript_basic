@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS数组基础</title>
+</head>
+<body>
+<script>
+  // 1. 字面量声明
+  let arr = [1, 2, true, '哈哈']
+  // 2. new Array 构造函数声明
+  let ar = new Array(1, 2, 3, 4)  //不建议，直接使用字面量声明
+  console.log(ar)
+
+  // 数组赋值
+  let arr1 = []
+  console.log()
+  arr[0] = 1
+  arr[1] = 5
+
+  // 数组修改
+  let arr2 = ['FWB', 'pink', 'red']
+  for (let i = 0; i < arr2.length; i++) {
+    arr2[i] = arr2[i] + '老师'
+  }
+  console.log(arr2)
+
+  // 数组增加 arr.push(元素1,元素2,元素3,···) --添加到数组末尾  --返回值是新增后数组长度
+  // arr.unshift(元素1,元素2,元素3,···) --添加到数组开头
+  let arr3 = ['FWB', 'pink']
+  // 新增
+  arr3.push('red', 'yellow')
+  console.log(arr3)
+  arr3.unshift('black', 'green')
+  console.log(arr3)
+
+  // 数组筛选 --使用循环筛选，再用push对新数组进行增加操作
+  let test = [2, 10, 6, 1, 77, 9, 54, 3, 78, 7]
+  // 1. 声明新数组
+  let newTest = []
+  // 2. 遍历旧数组
+  for (let i = 0; i < test.length; i++) {
+    if (test[i] >= 10) {
+      // 3. 满足调价追加给新数组
+      newTest.push(test[i])
+    }
+  }
+  // 4. 打印新数组结果
+  console.log(newTest)
+
+  // 数组删除
+  let arr4 = ['FWB', 'pink', 'red', 'yellow', 'green', 'blue']
+  // 1. arr.pop() --删掉最后一个数组数据，返回值是被删的数值
+  arr4.pop()
+  console.log(arr4)
+
+  // 2. arr.shift() --删掉第一个数组数据
+  arr4.shift()
+  console.log(arr4)
+
+  // 3. arr.splice(删除的下标, 删除的个数) --删掉指定的元素和指定数量  --开发常用
+  arr4.splice(1, 1)
+  console.log(arr4)
+
+</script>
+</body>
+</html>

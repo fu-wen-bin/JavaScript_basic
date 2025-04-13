@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>赋值运算符</title>
+</head>
+<body>
+<script>
+  let num = 1
+  // 常规写法 num = num + 1
+  num += 1 //赋值运算符
+  console.log(num)
+
+  //前置自增  ++num   后置自增   num++
+
+  //比较运算符  == 两边值是否相等   === 两边类型和值是否都相等   !== 两边是否不全等
+  console.log(3 > 5)
+  console.log(3 >= 3)
+  // 比较运算符有隐式转换，只判断两端的值
+  console.log(2 == 2)
+  console.log('2' == 2)
+  // === 全等判断所有都相同，以后尽量都用三等即全等
+  console.log(undefined === null)
+  console.log(2 === '2')
+  console.log(NaN === NaN) // NaN 不等于任何数值，包括本身
+
+  console.log(2 !== '2') //true
+  console.log(2 != '2')  //false
+  console.log(`------------------`)
+  console.log('a' < 'b')    //true
+  console.log('aa' < 'ab')   //true
+  console.log('abc' < 'aac')  //true
+  console.log(`------------------`)
+
+  //三元运算符
+  console.log(3 > 5 ? 3 : 5)  // 条件 ? 满足条件执行 : 不满足条件执行
+  let n = 3 > 5 ? 3 : 5
+  console.log(n)
+</script>
+</body>
+</html>
