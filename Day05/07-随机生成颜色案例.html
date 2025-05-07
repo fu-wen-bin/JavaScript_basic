@@ -11,41 +11,41 @@
   </style>
 </head>
 <body>
-<div></div>
-<script>
-  // 1. 自定义一个颜色函数
-  function getRandomColor (flag = true) {
-    // 3. 如果是true 则返回 #ffffff
-    if (flag) {
-      let str = '#'
-      let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
-      // for 循环随机抽6次添加到字符串中
-      for (let i = 1; i <= 6; i++) {
-        // 每次随机从数组中抽取一个出来
-        // random 是数组索引号 随机的
-        let random = Math.floor(Math.random() * arr.length)
-        str += arr[random]
+  <div></div>
+  <script>
+    // 1. 自定义一个颜色函数
+    function getRandomColor (flag = true) {
+      // 3. 如果是true 则返回 #ffffff
+      if (flag) {
+        let str = '#'
+        let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+        // for 循环随机抽6次添加到字符串中
+        for (let i = 1; i <= 6; i++) {
+          // 每次随机从数组中抽取一个出来
+          // random 是数组索引号 随机的
+          let random = Math.floor(Math.random() * arr.length)
+          str += arr[random]
+        }
+        return str
+
+      } else {
+        // 4. 否则是false 返回rgb(255,255,255)
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        return `rgb(${r}, ${g}, ${b})`
       }
-      return str
-
-    } else {
-      // 4. 否则是false 返回rgb(255,255,255)
-      let r = Math.floor(Math.random() * 256)
-      let g = Math.floor(Math.random() * 256)
-      let b = Math.floor(Math.random() * 256)
-      return `rgb(${r}, ${g}, ${b})`
     }
-  }
 
-  // 2. 调用函数
-  console.log(getRandomColor(false))
-  console.log(getRandomColor(true))
-  console.log(getRandomColor())
+    // 2. 调用函数
+    console.log(getRandomColor(false))
+    console.log(getRandomColor(true))
+    console.log(getRandomColor())
 
-  // 3. 可视化
-  const div = document.querySelector('div')
-  div.style.backgroundColor = getRandomColor()
+    // 3. 可视化
+    const div = document.querySelector('div')
+    div.style.backgroundColor = getRandomColor()
 
-</script>
+  </script>
 </body>
 </html>

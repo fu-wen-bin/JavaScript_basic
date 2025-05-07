@@ -5,27 +5,27 @@
   <title>转换秒数</title>
 </head>
 <body>
-<script>
+  <script>
 
-  // 1. 用户输入
-  let second = +prompt('请输入秒数')
+    // 1. 用户输入
+    let second = +prompt('请输入秒数')
 
-  // 2. 封装函数
-  function convertSecond (t) {
-    // console.log(t)
-    // 3. 时间转换
-    let h = parseInt(t / 60 / 60 % 24)
-    let m = parseInt(t / 60 % 60)
-    let s = parseInt(t % 60)
-    console.log(h, m, s)
-    h = h < 10 ? '0' + (h) : h
-    m = m < 10 ? '0' + (m) : m
-    s = s < 10 ? '0' + (s) : s
-    return `转换完成后${h}小时${m}分钟${s}秒`
-  }
+    // 2. 封装函数
+    function convertSecond (t) {
+      // console.log(t)
+      // 3. 时间转换
+      let h = parseInt(t / 60 / 60 % 24)
+      let m = parseInt(t / 60 % 60)
+      let s = parseInt(t % 60)
+      console.log(h, m, s)
+      h = h < 10 ? '0' + (h) : h
+      m = m < 10 ? '0' + (m) : m
+      s = s < 10 ? '0' + (s) : s
+      return `转换完成后${h}小时${m}分钟${s}秒`
+    }
 
-  let str = convertSecond(second)
-  document.write(str)
-</script>
+    let str = convertSecond(second)
+    document.write(str)
+  </script>
 </body>
 </html>

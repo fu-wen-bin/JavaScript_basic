@@ -5,18 +5,18 @@
   <title>隐式转换</title>
 </head>
 <body>
-<script>
-  // 1. 加号作为正号解析可以转换成数字型
-  // 2. 任何数据和字符串相加都是字符串类型
-  console.log(1 + 1)
-  console.log('FWB' + 1) //自动转换成字符串类型
-  console.log(2 + 2)    // 4
-  console.log(2 + '2')  // 22
-  console.log(2 - 2)    // 0
-  console.log(2 - '2')  // 0  建好不会产生转换，只有加号相对特殊
-  console.log(+12)       // 12
-  console.log(typeof +'123')   // 将字符转换成数字类型  number
-  console.log(+'11' + 11)   // 22
-</script>
+  <script>
+    // 1. 加号作为正号解析可以转换成数字型
+    // 2. 任何数据和字符串相加都是字符串类型
+    console.log(1 + 1)
+    console.log('FWB' + 1) //自动转换成字符串类型
+    console.log(2 + 2)    // 4
+    console.log(2 + '2')  // 22
+    console.log(2 - 2)    // 0
+    console.log(2 - '2')  // 0  建好不会产生转换，只有加号相对特殊
+    console.log(+12)       // 12
+    console.log(typeof +'123')   // 将字符转换成数字类型  number
+    console.log(+'11' + 11)   // 22
+  </script>
 </body>
 </html>

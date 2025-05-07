@@ -18,57 +18,57 @@
   </style>
 </head>
 <body>
-<script>
+  <script>
 
-  // 函数声明  --函数不调用自己不执行
-  function sheet99 () {
-    // 1. 外层循环控制行数
-    for (let i = 1; i <= 9; i++) {
-      // 2. 内层循环控制列数
-      for (let j = 1; j <= i; j++) {
-        document.write(`<span>${j} X ${i} = ${i * j}</span>`) //输出计算结果
+    // 函数声明  --函数不调用自己不执行
+    function sheet99 () {
+      // 1. 外层循环控制行数
+      for (let i = 1; i <= 9; i++) {
+        // 2. 内层循环控制列数
+        for (let j = 1; j <= i; j++) {
+          document.write(`<span>${j} X ${i} = ${i * j}</span>`) //输出计算结果
+        }
+        document.write('<br>') //完成换行
       }
-      document.write('<br>') //完成换行
     }
-  }
 
-  // 函数调用  --一次声明可以多次调用，小括号()才是真正调用函数
-  sheet99()
-  sheet99()
+    // 函数调用  --一次声明可以多次调用，小括号()才是真正调用函数
+    sheet99()
+    sheet99()
 
-  // 函数传参  --声明中是形参，传递过去是实参
-  function getSum (num1 = 0, num2 = 0) {
-    document.write(num1 + num2)
-  }
+    // 函数传参  --声明中是形参，传递过去是实参
+    function getSum (num1 = 0, num2 = 0) {
+      document.write(num1 + num2)
+    }
 
-  getSum(1, 2) // 结果是3
-  getSum()  // 结果是0，而不是NaN  --需要对声明中函数体设置默认值
+    getSum(1, 2) // 结果是3
+    getSum()  // 结果是0，而不是NaN  --需要对声明中函数体设置默认值
 
-  // 匿名函数  --不能直接引用，用函数表达式赋值给一个字面量  --避免全局变量之间相互污染
-  // 函数表达式 必须先声明再使用    具名表达式调用可以写在任何位置
-  let fn = function (x, y) {
-    console.log(x + y)
-  }
-  fn(1, 2);
-  // 立即执行函数必须要加分号代表结束
-  // 1. ( function () {} () )
+    // 匿名函数  --不能直接引用，用函数表达式赋值给一个字面量  --避免全局变量之间相互污染
+    // 函数表达式 必须先声明再使用    具名表达式调用可以写在任何位置
+    let fn = function (x, y) {
+      console.log(x + y)
+    }
+    fn(1, 2);
+    // 立即执行函数必须要加分号代表结束
+    // 1. ( function () {} () )
 
-  // 2. ( function () {} ) ()
-  (function (x, y) {
-    console.log(x + y)
-  })(1, 2)
+    // 2. ( function () {} ) ()
+    (function (x, y) {
+      console.log(x + y)
+    })(1, 2)
 
-  // 逻辑中断  --如果左边部分满足就不需要执行右边的操作   && 左边false短路  /  || 左边true短路
-  function fn1 (x, y) {
-    x = x || 0
-    y = y || 0
-    console.log(x + y)
-  }
+    // 逻辑中断  --如果左边部分满足就不需要执行右边的操作   && 左边false短路  /  || 左边true短路
+    function fn1 (x, y) {
+      x = x || 0
+      y = y || 0
+      console.log(x + y)
+    }
 
-  fn1(1, 2)
-  fn1()
+    fn1(1, 2)
+    fn1()
 
 
-</script>
+  </script>
 </body>
 </html>
